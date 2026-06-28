@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="900" viewBox="0 0 1700 900">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="850.0" y="64" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="36" font-weight="600" fill="#222">网站页面结构（线框图）</text>
+<rect x="50" y="125" width="1600" height="120" rx="8" fill="#F7F7F7" stroke="#555" stroke-width="1.5"/>
+<text x="850.0" y="175.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">研究概况</text>
+<text x="850.0" y="215.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">研究范围、主要资料、研究边界</text>
+<rect x="50" y="300" width="750" height="270" rx="8" fill="#EFEFEF" stroke="#555" stroke-width="1.5"/>
+<text x="425.0" y="425.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">数据资产与数据流</text>
+<text x="425.0" y="465.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">资产类型、参与方、服务形成过程</text>
+<rect x="900" y="300" width="750" height="270" rx="8" fill="#F7F7F7" stroke="#555" stroke-width="1.5"/>
+<text x="1275.0" y="425.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">案例比较</text>
+<text x="1275.0" y="465.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">全球蛙、瓴羊、京东库存配置</text>
+<rect x="50" y="640" width="1600" height="180" rx="8" fill="#EFEFEF" stroke="#555" stroke-width="1.5"/>
+<text x="850.0" y="720.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">估值计算器与下一步任务</text>
+<text x="850.0" y="760.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">场景收益、净收益、初始分配比例、待补证问题</text>
+</svg>

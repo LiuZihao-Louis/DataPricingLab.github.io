@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="650" viewBox="0 0 1700 650">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="850.0" y="64" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="36" font-weight="600" fill="#222">数据服务形成过程</text>
+<rect x="35" y="180" width="230" height="170" rx="8" fill="#F7F7F7" stroke="#555" stroke-width="1.5"/>
+<text x="150.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">数据输入</text>
+<text x="150.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">订单、库存、供给、履约、外部数据</text>
+<rect x="315" y="180" width="230" height="170" rx="8" fill="#EFEFEF" stroke="#555" stroke-width="1.5"/>
+<text x="430.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">治理与权限控制</text>
+<text x="430.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">清洗、脱敏、质量、接口</text>
+<rect x="595" y="180" width="230" height="170" rx="8" fill="#F7F7F7" stroke="#555" stroke-width="1.5"/>
+<text x="710.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">预测与补货计算</text>
+<text x="710.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">需求预测、库存策略、补货建议</text>
+<rect x="875" y="180" width="230" height="170" rx="8" fill="#EFEFEF" stroke="#555" stroke-width="1.5"/>
+<text x="990.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">业务执行</text>
+<text x="990.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">门店补货、供应协同、异常处理</text>
+<rect x="1155" y="180" width="230" height="170" rx="8" fill="#F7F7F7" stroke="#555" stroke-width="1.5"/>
+<text x="1270.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">业务结果</text>
+<text x="1270.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">缺货、周转、损耗、资金占用</text>
+<rect x="1435" y="180" width="230" height="170" rx="8" fill="#EFEFEF" stroke="#555" stroke-width="1.5"/>
+<text x="1550.0" y="255.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600" fill="#222">收益测算与分配</text>
+<text x="1550.0" y="295.0" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" fill="#444">成本、贡献、收益规则</text>
+<line x1="265" y1="265" x2="315" y2="265" stroke="#555" stroke-width="2"/>
+<line x1="545" y1="265" x2="595" y2="265" stroke="#555" stroke-width="2"/>
+<line x1="825" y1="265" x2="875" y2="265" stroke="#555" stroke-width="2"/>
+<line x1="1105" y1="265" x2="1155" y2="265" stroke="#555" stroke-width="2"/>
+<line x1="1385" y1="265" x2="1435" y2="265" stroke="#555" stroke-width="2"/>
+</svg>

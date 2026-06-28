@@ -1,5 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', () => {
-    document.querySelector(link.getAttribute('href'))?.setAttribute('tabindex', '-1');
-  });
-});
+const money=v=>new Intl.NumberFormat('zh-CN',{style:'currency',currency:'CNY',maximumFractionDigits:0}).format(v||0);
+function n(id){return Number(document.getElementById(id).value)||0}
+function update(){const sales=n('sales'),stockout=n('stockout')/100,margin=n('margin')/100,inventory=n('inventory'),carry=n('carry')/100,waste=n('waste'),labor=n('labor'),service=n('service'),compliance=n('compliance'),infra=n('infra');const recovered=sales*stockout,gp=recovered*margin,ic=inventory*carry/12,b=gp+ic+waste+labor,nb=b-service-compliance-infra;document.getElementById('recoveredSales').textContent=money(recovered);document.getElementById('grossProfit').textContent=money(gp);document.getElementById('inventorySaving').textContent=money(ic);document.getElementById('benefit').textContent=money(b);document.getElementById('netBenefit').textContent=money(nb);document.getElementById('retailerShare').textContent=money(nb*.32);document.getElementById('supplierShare').textContent=money(nb*.145);document.getElementById('platformShare').textContent=money(nb*.375);document.getElementById('infraShare').textContent=money(nb*.16)}document.getElementById('calcForm')?.addEventListener('submit',e=>{e.preventDefault();update()});update();
