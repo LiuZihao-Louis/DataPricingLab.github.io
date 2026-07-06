@@ -18,13 +18,6 @@
 
 直接双击 `index.html` 即可查看。估值计算器不依赖外部库或网络环境。
 
-## GitHub Pages 发布
-
-1. 新建 GitHub 仓库，例如 `retail-intelligent-replenishment`。
-2. 上传本文件夹的全部文件，保持 `index.html` 位于仓库根目录。
-3. 打开仓库的 `Settings` → `Pages`。
-4. 在 `Build and deployment` 中选择 `Deploy from a branch`，分支选 `main`，文件夹选 `/ (root)`。
-5. 保存后等待 GitHub Pages 生成公开地址。
 
 ## 使用边界
 
