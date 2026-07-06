@@ -1,1 +1,407 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全渠道智能补货研究（第二周）</title><link rel="stylesheet" href="styles.css"></head><body><div class="topbar"><div class="topbar-inner"><span>数据要素价格实验室线上实习 · 第二周</span><a href="#calculator">估值计算器</a></div></div><main class="container"><header class="page-head"><h1>零售行业数据资产估值与收益分配研究</h1><p>以全渠道智能补货为例。本页面用于展示第二周已整理的案例、证据边界和估值计算结构。</p><div class="meta">作者：刘子豪　|　研究阶段：第二周（案例与数据整理）</div></header><section class="section"><h2>1. 研究范围</h2><p>研究对象为全渠道智能补货服务。重点不是原始数据的直接交易，而是经过授权、治理和场景化处理后形成的需求预测、补货建议、接口、模型结果或持续服务。</p><table><thead><tr><th>研究问题</th><th>当前材料</th><th>仍需补证</th></tr></thead><tbody><tr><td>谁掌握补货相关数据？</td><td>数据资产地图、参与方和权利边界</td><td>具体合同、接口权限和授权链</td></tr><tr><td>数据如何形成服务？</td><td>三个案例的产品形态与公开业务成效</td><td>计费单位、报价或招投标资料</td></tr><tr><td>价值如何估计并分配？</td><td>场景收益、成本扣除和贡献分配原型</td><td>经营参数、访谈或专家校准</td></tr></tbody></table></section><section class="section"><h2>2. 数据资产与服务形成过程</h2><p>零售商、供应商、仓配方、平台和公共数据方共同提供不同类型的数据。可估值对象是数据服务，而不是未处理的个人信息明细。</p><img class="figure" src="assets/data_asset_map.svg" alt="数据资产与参与方"><img class="figure" src="assets/data_flow.svg" alt="数据服务形成过程"></section><section class="section"><h2>3. 案例比较</h2><div class="case-table"><table><thead><tr><th>案例</th><th>数据/产品形态</th><th>公开披露的结果</th><th>本研究中的用途</th></tr></thead><tbody><tr><td>全球蛙</td><td>消费行为、库存、物流、价格和销售数据；补货、洞察、协同服务</td><td>转化率 +15pct；销售额 +15%；库存周转 +30%；库存成本节省约 2000 万元</td><td>主案例：把业务结果连接到收益法估值</td></tr><tr><td>瓴羊天攻智投</td><td>户外广告、线下售点、电商行为；圈选、投放、投后分析</td><td>户外广告投放效果 +41%；采用“自营+平台”模式</td><td>对照案例：说明多方数据、模型和持续服务的组合</td></tr><tr><td>京东库存配置</td><td>库存、订单和配送网络数据；选品和库存分配算法</td><td>本地履约率 +0.54%；FDC 需求满足率 +1.05%</td><td>工程对照：为敏感性分析提供效果参数参考</td></tr></tbody></table></div><div class="note">公开案例通常披露业务成效多于合同价格。页面仅讨论收费逻辑和研究假设，不展示为真实市场报价。</div></section><section class="section" id="calculator"><h2>4. 场景化估值计算器</h2><p class="small">以下数值用于说明计算结构。结果不构成报价、投资建议或真实分成建议。</p><div class="calc-wrap"><form class="calc-form" id="calcForm"><label>月销售额（元）<input id="sales" type="number" value="30000000" min="0" step="10000"></label><label>缺货改善（百分点）<input id="stockout" type="number" value="3" min="0" max="100" step="0.1"></label><label>平均毛利率（%）<input id="margin" type="number" value="22" min="0" max="100" step="0.1"></label><label>平均库存下降（元）<input id="inventory" type="number" value="3000000" min="0" step="10000"></label><label>年化资金/仓储成本率（%）<input id="carry" type="number" value="10" min="0" max="100" step="0.1"></label><label>损耗/滞销减少（元）<input id="waste" type="number" value="70000" min="0" step="1000"></label><label>人工与协同节约（元）<input id="labor" type="number" value="35000" min="0" step="1000"></label><label>服务成本（元）<input id="service" type="number" value="80000" min="0" step="1000"></label><label>合规成本（元）<input id="compliance" type="number" value="15000" min="0" step="1000"></label><label>基础设施成本（元）<input id="infra" type="number" value="15000" min="0" step="1000"></label><button type="submit">重新计算</button></form><div class="result"><div class="formula">B = ΔGP + ΔIC + ΔWL + ΔLE</div><div class="formula">NB = B - C_service - C_compliance - C_infra</div><dl><div><dt>恢复销售额</dt><dd id="recoveredSales">-</dd></div><div><dt>新增毛利 ΔGP</dt><dd id="grossProfit">-</dd></div><div><dt>库存成本节约 ΔIC</dt><dd id="inventorySaving">-</dd></div><div><dt>场景总收益 B</dt><dd id="benefit">-</dd></div><div><dt>可分配净收益 NB</dt><dd id="netBenefit">-</dd></div><div><dt>零售商（32.0%）</dt><dd id="retailerShare">-</dd></div><div><dt>供应商（14.5%）</dt><dd id="supplierShare">-</dd></div><div><dt>平台/数商（37.5%）</dt><dd id="platformShare">-</dd></div><div><dt>基础设施方（16.0%）</dt><dd id="infraShare">-</dd></div></dl></div></div></section><section class="section"><h2>5. 研究边界与下一步</h2><div class="grid-2"><div><h3>目前可以使用的结论</h3><ul><li>全球蛙案例说明智能补货和协同服务可以对应可量化的业务改善。</li><li>政策材料支持按照投入和贡献讨论数据资产收益分配。</li><li>数据服务可以以接口、模型结果或持续服务等形式交付。</li></ul></div><div><h3>第三周需要补充的材料</h3><ul><li>报价页、合同样本或招投标公告。</li><li>毛利率、库存持有成本、缺货率和损耗率的真实区间。</li><li>行业人士对五项贡献变量和分配权重的意见。</li></ul></div></div><h3>主要来源</h3><ol class="references"><li><a href="https://www.nda.gov.cn/sjj/zhuanti/ztsjysx/sjysal/0918/20240918140928064199012_pc.html" target="_blank">国家数据局：全球蛙案例</a></li><li><a href="https://www.nda.gov.cn/sjj/ywpd/zcgh/0124/20250124163706329985560_pc.html" target="_blank">国家数据局：瓴羊案例</a></li><li><a href="https://zcpgzx.mof.gov.cn/zcfg/202401/t20240112_3925778.htm" target="_blank">财政部：关于加强数据资产管理的指导意见</a></li><li><a href="https://www.nda.gov.cn/sjj/xxgk/gknr/ghjh/1125/ff808081-92b8a4f1-0193-612f2a6d-04c4.pdf" target="_blank">国家数据局：可信数据空间发展行动计划</a></li><li><a href="https://fgw.sz.gov.cn/gkmlpt/content/10/10454/post_10454243.html" target="_blank">深圳市数据交易管理暂行办法</a></li></ol></section><footer>第二周研究材料 | 零售行业全渠道智能补货</footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="零售行业全渠道智能补货数据服务的场景化价值、收费逻辑与收益分配研究。" />
+  <title>零售行业数据资产估值与收益分配研究</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div>
+        <p class="eyebrow">数据要素价格实验室线上实习 · 最终网站原型</p>
+        <h1>零售行业数据资产估值与收益分配研究</h1>
+        <p class="subtitle">以全渠道智能补货数据服务为核心场景</p>
+      </div>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">目录</button>
+    </div>
+    <nav class="site-nav" id="siteNav" aria-label="页面目录">
+      <div class="wrap nav-inner">
+        <a href="#scope">研究范围</a>
+        <a href="#assets">数据资产</a>
+        <a href="#evidence">公开证据</a>
+        <a href="#cases">案例研究</a>
+        <a href="#valuation">估值原型</a>
+        <a href="#sharing">收益分配</a>
+        <a href="#sources">参考来源</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-main">
+        <p class="section-kicker">研究摘要</p>
+        <h2 id="intro-title">研究对象是“智能补货数据服务”，不是原始数据明细的直接买卖。</h2>
+        <p>
+          本研究关注订单、库存、供应、物流及外部辅助信息如何经过治理、预测和业务嵌入，形成门店级补货建议、库存配置和供应链协同能力；随后再讨论这项服务的收费逻辑、场景收益和多方收益分配。
+        </p>
+      </div>
+      <aside class="facts" aria-label="研究信息">
+        <dl>
+          <div><dt>研究阶段</dt><dd>第三周正式报告 v1.0</dd></div>
+          <div><dt>资料检索截止</dt><dd>2026 年 7 月 6 日</dd></div>
+          <div><dt>证据范围</dt><dd>公开可核验材料</dd></div>
+          <div><dt>作者</dt><dd>刘子豪</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="scope" class="section">
+      <header class="section-header">
+        <p class="section-kicker">01</p>
+        <h2>研究范围与边界</h2>
+      </header>
+      <p>
+        “数据资源价值”“数据服务价格”“服务带来的经营增量收益”和“多主体收益分配”是四个不同层次的问题。它们相关，但不能相互替代。本网站将公开事实、谨慎解释和情景假设分开呈现。
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>层次</th>
+              <th>核心问题</th>
+              <th>本研究的处理方式</th>
+              <th>不作的推断</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>数据资源价值</td>
+              <td>订单、库存、供应等数据能否合规开发和使用？</td>
+              <td>识别来源、权利链、质量与合规成本</td>
+              <td>不为原始数据给出固定单价</td>
+            </tr>
+            <tr>
+              <td>数据服务价格</td>
+              <td>补货服务可以怎样收费？</td>
+              <td>归纳项目制、按调用量、订阅制等公开计费口径</td>
+              <td>不从案例效果倒推合同价格</td>
+            </tr>
+            <tr>
+              <td>场景增量收益</td>
+              <td>服务带来哪些可计量经营结果？</td>
+              <td>以新增毛利、库存成本、损耗和人效为收益法变量</td>
+              <td>不将单案例结果认定为普遍因果效应</td>
+            </tr>
+            <tr>
+              <td>收益分配</td>
+              <td>多方如何分享可分配净收益？</td>
+              <td>提出贡献度情景模拟框架</td>
+              <td>不声称存在统一行业分成比例</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <strong>研究边界：</strong>涉及个人信息时，研究对象应是经授权、去标识化、聚合化、模型化或服务化后的结果；不将可识别个人的原始记录视为普通商品直接流转。
+      </div>
+    </section>
+
+    <section id="assets" class="section">
+      <header class="section-header">
+        <p class="section-kicker">02</p>
+        <h2>数据资产与服务形成过程</h2>
+      </header>
+      <p>
+        全渠道智能补货不是单纯预测销量，而是把多源数据转化为门店、仓库或品类层面的补货、配货与调拨建议。下图展示从数据来源到场景收益与分配的基本链条。
+      </p>
+      <figure class="figure">
+        <img src="assets/data_value_chain.png" alt="多方数据来源、治理与合规、预测与补货引擎、业务执行、场景收益、净收益与分配构成的智能补货数据服务价值形成链" />
+        <figcaption>图 1　全渠道智能补货数据服务的价值形成链（作者整理）</figcaption>
+      </figure>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>数据类别</th>
+              <th>典型信息</th>
+              <th>主要控制/提供主体</th>
+              <th>在服务中的作用与合规关注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>交易与库存</td>
+              <td>SKU、销量、库存量、退货、门店缺货</td>
+              <td>零售商、平台</td>
+              <td>形成需求与库存状态；涉及个人信息时需用途限定、最小必要</td>
+            </tr>
+            <tr>
+              <td>供应与履约</td>
+              <td>供给量、价格、到货、时效、物流、退货</td>
+              <td>供应商、物流商、零售商</td>
+              <td>支持补货提前期、供需协同和调拨决策；需明确合同使用范围</td>
+            </tr>
+            <tr>
+              <td>营销与外部辅助</td>
+              <td>促销、广告、天气、日历、商圈、客流</td>
+              <td>平台、公共数据运营方、第三方</td>
+              <td>解释需求波动；可通过 API 或数据服务调用，需记录来源与许可</td>
+            </tr>
+            <tr>
+              <td>衍生结果</td>
+              <td>需求预测、补货计划、库存预警、采购单</td>
+              <td>平台/数商与零售商共同形成</td>
+              <td>更适合作为对外流通和收费对象；应保留模型输出与使用边界</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="evidence" class="section">
+      <header class="section-header">
+        <p class="section-kicker">03</p>
+        <h2>公开收费与计费证据</h2>
+      </header>
+      <p>
+        公开资料对合同价格和分成比例披露有限，但可以观察到服务采购、按调用量计费、按资源消耗计费和按用户订阅等收费口径。它们不能形成统一市场单价，只能作为收费机制、成本测算和市场法旁证。
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>公开证据</th>
+              <th>可验证事实</th>
+              <th>可支持的结论</th>
+              <th>不能据此得出的结论</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://ggzyfw.beijing.gov.cn/jyxxzbjggg/20250606/5137266.html" target="_blank" rel="noopener">北京消费大数据采集项目</a></td>
+              <td>2025 年中标总金额 190 万元，服务包含消费数据、重点商圈客流数据的采集、加工和监测。</td>
+              <td>消费与商圈数据的采集加工监测服务存在公开采购金额。</td>
+              <td>不能视为智能补货服务的标准合同价。</td>
+            </tr>
+            <tr>
+              <td><a href="https://lbs.amap.com/pages/base_service_price" target="_blank" rel="noopener">高德开放平台</a></td>
+              <td>位置服务存在按调用量计费的公开口径。</td>
+              <td>外部位置等辅助数据可以按 API 调用量进入服务成本。</td>
+              <td>不能代表整个补货系统的价格。</td>
+            </tr>
+            <tr>
+              <td><a href="https://aws.amazon.com/forecast/pricing/" target="_blank" rel="noopener">Amazon Forecast</a></td>
+              <td>需求预测云服务按数据导入、训练和预测等资源使用量计费。</td>
+              <td>需求预测能力可以采用使用量计费。</td>
+              <td>境外价格不能直接换算为中国项目单价。</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.microsoft.com/en-us/dynamics-365/products/supply-chain-management" target="_blank" rel="noopener">Dynamics 365 Supply Chain Management</a></td>
+              <td>供应链管理产品公开采用按用户/月订阅。</td>
+              <td>供应链计划与库存优化可采用 SaaS 订阅交付。</td>
+              <td>不代表本土项目制的实际报价。</td>
+            </tr>
+            <tr>
+              <td><a href="https://market.aliyun.com/store/4925914/index.html" target="_blank" rel="noopener">高德客流潮汐分析</a></td>
+              <td>公开产品页列示 50 万元/年、人工服务。</td>
+              <td>商圈客流分析类数据服务存在公开年费报价。</td>
+              <td>公开标价不等于实际成交价，也不等于补货服务价格。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="evidence-legend" aria-label="证据说明">
+        <span><b>事实</b>：政策、采购公告、官方案例、产品页或财报可直接验证的内容。</span>
+        <span><b>解释</b>：对事实的谨慎归纳。</span>
+        <span><b>假设</b>：仅用于模型演示，不作为市场事实。</span>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <header class="section-header">
+        <p class="section-kicker">04</p>
+        <h2>案例研究</h2>
+      </header>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>案例</th>
+              <th>定位与数据/产品形态</th>
+              <th>公开披露的结果</th>
+              <th>本研究中的用途</th>
+              <th>证据边界</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.nda.gov.cn/sjj/ywpd/zcgh/0127/20250127125922927502062_pc.html" target="_blank" rel="noopener">全球蛙</a></td>
+              <td>消费行为、库存、物流、价格和销售等数据；智能补货、市场洞察、供应链优化与协同服务。</td>
+              <td>案例披露：库存周转效率提升 30%，节省库存成本约 2000 万元；客户转化率、客单价、销售额与协同效率也出现改善。</td>
+              <td>主案例：将业务成效连接到收益法变量。</td>
+              <td>未找到公开合同价格、套餐、按门店收费或分成比例；不能将所有改善归因于补货模块。</td>
+            </tr>
+            <tr>
+              <td><a href="https://m.jdx.com/product/replenishment" target="_blank" rel="noopener">京东零售云智能预测补货</a></td>
+              <td>使用历史数据、天气、日历、季节、峰值、促销和价格等信息，输出销量预测、补货建议和采购单。</td>
+              <td>产品页明确展示补货服务的功能边界；技术资料说明库存配置和调拨以提升履约能力、降低缺货损失和成本为目标。</td>
+              <td>技术对照：说明智能补货如何形成业务价值。</td>
+              <td>产品页未披露价格；“显著降低”等表述没有可直接用于模型的百分比。</td>
+            </tr>
+            <tr>
+              <td><a href="https://lydaas.com/case/xxy" target="_blank" rel="noopener">瓴羊天攻智投</a></td>
+              <td>户外广告、线下售点与电商行为等多方数据；潜客圈选、媒介点位、投后分析和持续运营服务。</td>
+              <td>公开材料体现“数据 + 分析 + 应用 + 成功服务”的持续服务模式。</td>
+              <td>商业模式对照：说明多方数据、模型与运营可以形成持续服务收入。</td>
+              <td>不是补货案例；未找到公开价格、合同或效果分成比例。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="valuation" class="section">
+      <header class="section-header">
+        <p class="section-kicker">05</p>
+        <h2>场景化估值原型</h2>
+      </header>
+      <p>
+        收益法的测算对象是智能补货服务带来的场景增量收益，而不是原始数据本身。模型将业务收益分为新增毛利、库存成本节约、损耗/滞销减少和补货协同效率提升四部分；扣除服务、合规和基础设施成本后得到可分配净收益。
+      </p>
+      <div class="formula-block" aria-label="估值公式">
+        <div><span>场景总收益</span><code>B = ΔGP + ΔIC + ΔWL + ΔLE</code></div>
+        <div><span>可分配净收益</span><code>NB = B − C<sub>service</sub> − C<sub>compliance</sub> − C<sub>infra</sub></code></div>
+      </div>
+      <div class="model-grid">
+        <form id="calcForm" class="calculator" novalidate>
+          <h3>情景计算器</h3>
+          <p class="small">默认数值只用于演示计算结构，不构成真实报价或行业标准。</p>
+          <div class="form-grid">
+            <label>月销售额（元）<input id="sales" type="number" min="0" step="10000" value="30000000" /></label>
+            <label>缺货改善（百分点）<input id="stockout" type="number" min="0" max="100" step="0.1" value="3" /></label>
+            <label>平均毛利率（%）<input id="margin" type="number" min="0" max="100" step="0.1" value="22" /></label>
+            <label>平均库存下降（元）<input id="inventory" type="number" min="0" step="10000" value="3000000" /></label>
+            <label>年化资金/仓储成本率（%）<input id="carry" type="number" min="0" max="100" step="0.1" value="10" /></label>
+            <label>损耗/滞销减少（元）<input id="waste" type="number" min="0" step="1000" value="70000" /></label>
+            <label>人工与协同节约（元）<input id="labor" type="number" min="0" step="1000" value="35000" /></label>
+            <label>服务成本（元）<input id="service" type="number" min="0" step="1000" value="80000" /></label>
+            <label>合规成本（元）<input id="compliance" type="number" min="0" step="1000" value="15000" /></label>
+            <label>基础设施成本（元）<input id="infra" type="number" min="0" step="1000" value="15000" /></label>
+          </div>
+          <div class="button-row">
+            <button type="submit">计算</button>
+            <button type="button" id="resetButton" class="button-secondary">恢复示例</button>
+          </div>
+        </form>
+        <aside class="calc-result" aria-live="polite">
+          <h3>计算结果</h3>
+          <dl>
+            <div><dt>恢复销售额</dt><dd id="recoveredSales">—</dd></div>
+            <div><dt>新增毛利 ΔGP</dt><dd id="grossProfit">—</dd></div>
+            <div><dt>库存成本节约 ΔIC</dt><dd id="inventorySaving">—</dd></div>
+            <div><dt>场景总收益 B</dt><dd id="benefit">—</dd></div>
+            <div class="total"><dt>可分配净收益 NB</dt><dd id="netBenefit">—</dd></div>
+          </dl>
+          <p class="small result-note">负数表示当前假设下，服务的月度场景收益不足以覆盖服务、合规和基础设施成本。</p>
+        </aside>
+      </div>
+      <details class="method-note">
+        <summary>变量说明与证据边界</summary>
+        <ul>
+          <li><strong>ΔGP：</strong>缺货改善后恢复的销售额 × 平均毛利率。</li>
+          <li><strong>ΔIC：</strong>平均库存下降 × 年化资金/仓储成本率 ÷ 12。</li>
+          <li><strong>ΔWL、ΔLE：</strong>分别指损耗/滞销减少和人工/协同效率提升带来的节约。</li>
+          <li>全球蛙的库存周转、库存成本、销售和协同效果可用于确定敏感性分析方向，但不能直接作为所有企业的因果系数。</li>
+          <li>库存持有成本率没有获得可直接套用的高等级统一行业参数；默认值仅是示例假设。</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="sharing" class="section">
+      <header class="section-header">
+        <p class="section-kicker">06</p>
+        <h2>收益分配：初步情景模型</h2>
+      </header>
+      <p>
+        下表不是行业统一标准，而是按照“来源、治理、模型、场景转化、信任与基础设施”五类贡献设计的首轮情景模拟。实际权重应由合同样本、访谈或企业数据进一步校准。
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>参与方</th>
+              <th>主要贡献</th>
+              <th>初始情景比例</th>
+              <th>基于当前计算器净收益的金额</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>零售商</td><td>交易、库存和门店数据；业务执行与场景转化</td><td>32.0%</td><td id="retailerShare">—</td></tr>
+            <tr><td>供应商</td><td>供给、价格和履约协同数据</td><td>14.5%</td><td id="supplierShare">—</td></tr>
+            <tr><td>平台/数商</td><td>数据治理、建模、产品化与持续运维</td><td>37.5%</td><td id="platformShare">—</td></tr>
+            <tr><td>可信流通/基础设施方</td><td>权限控制、合规、存证、计算和接口保障</td><td>16.0%</td><td id="infraShare">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <strong>解释：</strong>分配前先扣除服务、合规和基础设施成本。比例反映的是一个便于讨论的机制原型，不代表任何企业、平台或交易机构的真实分成安排。
+      </div>
+    </section>
+
+    <section class="section" id="limitations">
+      <header class="section-header">
+        <p class="section-kicker">07</p>
+        <h2>研究局限与下一步</h2>
+      </header>
+      <div class="two-column">
+        <div>
+          <h3>当前可以较稳妥使用的结论</h3>
+          <ul>
+            <li>全球蛙案例说明，智能补货与供应链协同服务可以对应库存周转、库存成本、销售与运营效率等可观察业务指标。</li>
+            <li>数据服务可采用采购、API 调用、使用量或 SaaS 订阅等收费口径；公开收费机制多于公开合同价格。</li>
+            <li>数据产品、数据服务和数据工具更适合作为研究对象，而不是原始个人信息的直接交易。</li>
+          </ul>
+        </div>
+        <div>
+          <h3>仍需进一步验证的问题</h3>
+          <ul>
+            <li>真实报价、合同和采购样本，以验证服务费、计费单位和交付边界。</li>
+            <li>中国本土零售业态的毛利率、库存持有成本、缺货率和损耗率区间。</li>
+            <li>行业人士对贡献因子、风险承担与分配权重的判断。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" class="section sources">
+      <header class="section-header">
+        <p class="section-kicker">08</p>
+        <h2>主要参考来源与下载</h2>
+      </header>
+      <p>以下列出网站中使用的主要公开资料。完整证据表与正式报告可以下载查看。</p>
+      <div class="downloads">
+        <a href="docs/Week3_Formal_Research_Report_v1.pdf" download>下载第三周正式报告（PDF）</a>
+        <a href="docs/week3_evidence_pack.md" download>下载第三周证据包（Markdown）</a>
+      </div>
+      <ol class="references">
+        <li><a href="https://www.nda.gov.cn/sjj/ywpd/zcgh/0127/20250127125922927502062_pc.html" target="_blank" rel="noopener">国家数据局：全球蛙案例</a></li>
+        <li><a href="https://m.jdx.com/product/replenishment" target="_blank" rel="noopener">京东零售云：智能预测补货</a></li>
+        <li><a href="https://developer.jdcloud.com/article/4165" target="_blank" rel="noopener">京东云开发者社区：库存选品与调拨优化技术文章</a></li>
+        <li><a href="https://lydaas.com/case/xxy" target="_blank" rel="noopener">瓴羊：天攻智投案例</a></li>
+        <li><a href="https://ggzyfw.beijing.gov.cn/jyxxzbjggg/20250606/5137266.html" target="_blank" rel="noopener">北京市公共资源交易服务平台：消费大数据采集项目中标结果公告</a></li>
+        <li><a href="https://lbs.amap.com/pages/base_service_price" target="_blank" rel="noopener">高德开放平台：基础服务计费说明</a></li>
+        <li><a href="https://aws.amazon.com/forecast/pricing/" target="_blank" rel="noopener">AWS：Amazon Forecast Pricing</a></li>
+        <li><a href="https://www.microsoft.com/en-us/dynamics-365/products/supply-chain-management" target="_blank" rel="noopener">Microsoft：Dynamics 365 Supply Chain Management</a></li>
+        <li><a href="https://fgw.sz.gov.cn/gkmlpt/content/10/10454/post_10454243.html" target="_blank" rel="noopener">深圳市数据交易管理暂行办法</a></li>
+        <li><a href="https://www.nda.gov.cn/sjj/zwgk/zjjd/0212/20260212132946250499791_pc.html" target="_blank" rel="noopener">国家数据局：数据流通相关政策解读</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>零售行业全渠道智能补货数据服务研究 · 资料检索截止 2026 年 7 月 6 日</p>
+      <p>本网站为研究展示，不构成市场报价、投资建议或合同分配建议。</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
